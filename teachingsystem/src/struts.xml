@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default" namespace="/views">				
+		
+		<default-action-ref name="error"></default-action-ref>
+		
+		<!-- URL错误action -->
+		<action name="error" class="action.ErrorAction">
+			<result name="success">/views/error.jsp</result>
+		</action>
+	
+		<!-- 登录action -->
+		<action name="login" class="action.LoginAction" method="loginCheck">
+			<result name="input">/views/logout.jsp</result>
+		</action>
+		
+		<!-- 注销action -->
+		<action name="logout" class="action.LogoutAction">
+			<result name="success">/views/logout.jsp</result>
+		</action>
+		
+		<!-- 注册action -->
+		<action name="register" class="action.RegisterAction" method="register1">
+			<result name="input">/views/register.jsp</result>
+		</action>
+		
+		<!-- 设置课程action -->
+		<action name="setCourse" class="action.SetCourseAction">
+			<result name="success">/views/home.jsp</result>
+		</action>
+		
+		<!-- 添加课程action -->
+		<action name="addCourse" class="action.AddCourseAction" method="addCourse1">
+			<result name="input">/views/add_course.jsp</result>
+		</action>
+		
+		<!-- 添加预习action -->
+		<action name="addPreview" class="action.AddPreviewAction" method="addPreview1">
+			<result name="input">/views/add_preview.jsp</result>
+		</action>
+		
+		<!-- 添加填空题action -->
+		<action name="addBlank" class="action.AddBlankAction" method="addBlank1">
+			<result name="input">/views/add_fill.jsp</result>
+		</action>
+		
+		<!-- 添加选择题action -->
+		<action name="addChoose" class="action.AddChooseAction" method="addChoose1">
+			<result name="input">/views/add_option.jsp</result>
+		</action>
+		
+		<!-- 查看成绩action -->
+		<action name="showGrade" class="action.ShowGradeAction" method="selectGrade">
+			<result name="input">/views/display_grade.jsp</result>
+		</action>
+		
+		<!-- 查看习题action -->
+		<action name="showQuestion" class="action.ShowQuestionAction" method="showQue">
+			<result name="input">/views/display_item.jsp</result>
+		</action>
+		
+		<!-- 删除习题action -->
+		<action name="deleteQuestion" class="action.DelQuestionAction" method="delQuestion">
+			<result name="input">/views/display_item.jsp</result>
+		</action>
+		
+		<!-- 修改传值action -->
+		<action name="editQuestion" class="action.EditQuestionAction">
+			<result name="input">/views/display_item.jsp</result>
+			<result name="blank">/views/edit_fill.jsp</result>
+			<result name="choice">/views/edit_option.jsp</result>
+		</action>
+		
+		<!-- 修改填空题action -->
+		<action name="updateBlank" class="action.UpdateBlankAction" method="updateBlank1">
+			<result name="input">/views/edit_fill.jsp</result>
+		</action>
+		
+		<!-- 修改选择题action -->
+		<action name="updateChoice" class="action.UpdateChoiceAction" method="updateChoice1">
+			<result name="input">/views/edit_option.jsp</result>
+		</action>
+	</package>
+</struts>    

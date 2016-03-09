@@ -1,0 +1,21 @@
+input{
+				border: none;
+				width: 80px;
+				height: 29px;
+				font-size: 16px;
+				color: white;
+				background-color: #00AAAA;
+				letter-spacing: 5px;
+				border-radius: 2px;
+				font-family:"Î¢ÈíÑÅºÚ";
+				cursor: pointer;
+			}
+			select{
+				height:30px;
+				width:140px;
+				margin-left:20px;
+				border-radius:3px;
+				font-family:"Î¢ÈíÑÅºÚ";
+				text-align:right;
+				font-size:15px;
+			}
